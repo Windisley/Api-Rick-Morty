@@ -1,0 +1,377 @@
+:root{
+    --strong-green: #022601;
+    --dark-green: #034001;
+    --light-green: #3E8C3B;
+    --complementary: #2C7329;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+
+}
+
+body{
+    font-size: 65%;
+        font-family: "Press Start 2P", system-ui, Arial, Helvetica, sans-serif;
+        font-weight: 400;
+        font-style: normal;
+      
+      
+}
+
+section{
+    width: 100%;
+    max-width: 1480px;
+    margin: 0 auto;
+    min-height: 100vh;
+    overflow: hidden;
+    background: url(../../imgs/backgroundgame.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+     position: relative;
+}
+
+#boxicon{
+    width: 200px;
+    height: 200px;
+    padding: 1rem;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 2%;
+    left: 1%;
+}
+
+#boxicon img{
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+    object-fit: contain;
+    object-position: center center;
+    cursor: pointer;
+    transition: filter .5s ease-in-out;
+    transition: transform 1s ease-in-out;
+    transition: .3s ease;
+    filter: drop-shadow(2px 2px 0px var(--strong-green))
+;  
+}
+
+#boxicon img:hover{
+  filter: drop-shadow(1px 1px 0px var(--dark-green))
+          drop-shadow(1px 1px 0px var(--light-green))
+  ;  
+
+  transform: rotateY(360deg);
+}
+
+#boxlevel{
+    max-width: 300px;
+    min-width: 200px;
+    max-height: 200px;
+    min-height: 80px;
+
+    margin: 0 auto;
+    position: absolute;
+    top: 9%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #022601;
+    border: 1px solid var(--dark-green);
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+ #boxlevel p  span, #boxlevel p {
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: clamp(1rem, 2vw, 1.5rem);
+  letter-spacing: 1px;
+  color: var(--light-green);
+}
+
+
+.container{
+    width: 100%;
+    margin: 0 auto;
+    min-height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2.2rem;
+    flex-direction: column;
+   
+}
+
+.container .boximg{
+    width: 90%;
+    max-width: 400px;
+    min-width: 200px;
+    max-height: 100%;
+    min-height: 200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .3s ease;
+}
+
+.container .boximg #person{
+    width: 100%;
+    margin: 0 auto;
+    border: 2px solid;
+    border-radius: 6px;
+    object-fit: cover;
+    object-position: center center;
+    cursor: pointer;
+    transition: .5s ease;
+    
+}
+
+
+
+
+.container .boxinputandbutton{
+    width: 100%;
+    margin: 0 auto;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.container .boxinputandbutton #inputtext{
+    width: 100%;
+    max-width: 280px;
+    min-width: 180px;
+    margin: 0 auto;
+    padding: 7px 21px;
+    border: 1.5px solid var(--strong-green);
+    color: var(--strong-green);
+    
+}
+
+.container .boxinputandbutton #inputtext::placeholder{
+    font-family: "Press Start 2P", system-ui, Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: .5rem;
+    text-transform: uppercase;
+    letter-spacing: .2px;
+}
+
+.container .boxinputandbutton #sendbutton{
+    width: 100%;
+    max-width: 280px;
+    min-width: 180px;
+    margin: 0 auto;
+    padding: 7px 21px;
+    border: 1px solid;
+    text-transform: capitalize;
+    font-family: "Press Start 2P", system-ui, Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1rem;
+    letter-spacing: .2px;
+    cursor: pointer;
+    color: var(--strong-green);
+    background-color: var(--light-green);
+    transition: .6s ease-in-out;
+
+}
+
+.container .boxinputandbutton #sendbutton:hover{
+    background-color: var(--strong-green);
+    color: var(--light-green);
+    
+}
+
+.boxresult{
+    width: 100%;
+    height: 100vh;
+    margin: 0 auto;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--strong-green);
+    z-index: 5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.boxresult .titleresult{
+    max-width: 100%;
+    margin: 0 auto;
+    position: absolute;
+    top: 10%;
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--light-green); 
+    letter-spacing: 2px;
+    line-height: 1.5rem;
+    
+}
+
+.boxscoreandbutton{
+    max-width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    flex-direction: column;
+}
+
+.boxscoreandbutton p, .boxscoreandbutton p strong{
+    max-width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 1.2rem;
+    text-wrap: nowrap;
+    text-transform: capitalize;
+    color: var(--light-green);
+    animation: opacity 1s 1;
+    transition: all .5s ease;
+}
+
+@keyframes opacity {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+.boxresult button{
+    width: 100%;
+    margin: 0 auto;
+    max-width: 300px; 
+    padding: 7px 21px;
+    border: 1px solid var(--strong-green);
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1rem;
+    cursor: pointer;
+    font-family: "Press Start 2P", system-ui, Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    background-color: var(--light-green);
+    color: var(--strong-green);
+    transition: .5s ease-in-out;
+}
+
+.boxresult button:hover{
+    background-color: var(--dark-green);
+    color: var(--light-green);
+}
+
+@media screen and (max-width: 990px) {
+    section{
+        width: 100%;
+        max-width: 1480px;
+        margin: 0 auto;
+        min-height: 100vh;
+        overflow: hidden;
+        background: url(../../imgs/backgroundgame990.jpeg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: 60% center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+         position: relative;
+    }
+}
+
+
+@media screen and (max-width: 724px) {
+    section{
+        width: 100%;
+        max-width: 1480px;
+        margin: 0 auto;
+        min-height: 100vh;
+        overflow: hidden;
+        background: url(../../imgs/backgroundgame724.jpeg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: 50% center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+         position: relative;
+    }
+}
+
+
+@media screen and (max-width: 510px) {
+    section{
+        width: 100%;
+        max-width: 1480px;
+        margin: 0 auto;
+        min-height: 100vh;
+        overflow: hidden;
+        background: url(../../imgs/backgroundgame510.jpeg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: 50% center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+         position: relative;
+    }
+}
+
+
+
+
+@media screen and (max-width: 576px) {
+    #boxicon{
+        top: 75%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+@media screen and (max-width: 320px) {
+    section{
+        width: 100%;
+        max-width: 1480px;
+        margin: 0 auto;
+        min-height: 100vh;
+        overflow: hidden;
+        background: url(../../imgs/backgroundgame320.jpeg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+         position: relative;
+    }
+}
+
+
+
